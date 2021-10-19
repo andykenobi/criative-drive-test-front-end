@@ -5,26 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatCardModule} from '@angular/material/card';
-
-import { LoginComponent } from './login/login.component';
-import { UserListComponent } from './dashboard/users/user-list/user-list.component';
-import { UserEditComponent } from './dashboard/users/user-edit/user-edit.component';
-import { UserShowComponent } from './dashboard/users/user-show/user-show.component';
+import { LoginModule } from './login/login.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LoginComponent,
-    UserListComponent,
-    UserEditComponent,
-    UserShowComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatCardModule,
+    LoginModule,
+    DashboardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
